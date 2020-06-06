@@ -1,3 +1,5 @@
 *.class
 *.log
 /target/
+/public/
+/zk-single-kafka-single/
