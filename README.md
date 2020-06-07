@@ -73,5 +73,35 @@ In the producer terminal type anything you want and press enter. Move to the con
 Now we have our local Kafka up and running.
 To stop consumer and producer just press Ctrl-C.
 
+# Kafka Producer
+
+A Kafka producer is implemented in `eventing.producer` package.
+To test it:
+
+- start Kafka using `docker-compose`
+- start play application using `sbt run` in the project directory
+- start a consumer (`kafka-console-consumer.sh`)
+- use `curl` or `Postman` or any other app to hit the endpoint to publish the message
+
+There are two endpoints available to push messages to Kafka
+
+- `POST /publish/:message`
+- `POST /publish`
+
+If you want to use just `curl` try:
+
+- `curl -X POST http://localhost:9000/publish/hello`
+
+This endpoint will post words. If you want to publish complex text messages use:
+
+- `curl -X POST http://localhost:9000/publish/ -H "Content-Type: application/json" -d '{"message":"this is a complex message"}'`
+
+The producer takes two parameters from `application.conf`:
+
+- `kafka.host`, now set to `localhost:9092`
+- `kafka.producer.topic`, topic name to publish the message
+
+That's it for the producer!
+
 This is a project in progress.
 
