@@ -32,6 +32,11 @@ r-compose.
 
 Don't credit me for `docker.yml` file. The credit goes to [Stephane Maarek](https://github.com/simplesteph) in [this](https://github.com/simplesteph/kafka-stack-docker-compose) project.
 
+To clean used space (you will loose all your data in Kafka):
+
+- `docker-compose -f docker.yml down`
+- `rm -rf zk-single-kafka-single`
+
 # Kafka
 
 To create topics, removing, etc. you can choose from:
