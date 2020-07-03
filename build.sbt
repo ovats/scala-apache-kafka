@@ -1,6 +1,6 @@
 name := """scala-apache-kafka"""
 
-version := "1.0.1"
+version := "1.0.2"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
