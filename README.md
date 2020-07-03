@@ -108,5 +108,16 @@ The producer takes two parameters from `application.conf`:
 
 That's it for the producer!
 
+# Schedulers
+
+Play Framework is based on Akka, and Akka bring schedulers available to Scala.
+With schedulers we can execute task or send messages to actors, every 30 seconds, 10 minutes or the amount of time we want.
+To implement a Kafka Consumer we are going to use schedulers. 
+
+# Kafka Consumer
+
+To do!
+
+
 This is a project in progress.
 
